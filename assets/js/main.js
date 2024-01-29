@@ -16,7 +16,7 @@ async function getGifs() {
       console.log(gifData.data[0].url)
 
       if (response.status === 200) {
-          gifContainer.innerHTML = gifData.data.map((gif,i) => `<div class="card"> <a href="${gifData.data[i].url}"><img src="${gif.images.fixed_width.url}" alt="GIF"></a></div>`).join('');
+          gifContainer.innerHTML = gifData.data.map((gif,i) => `<div class="card"> <a href="${gifData.data[i].url}" target="_blank"><img src="${gif.images.fixed_width.url}" alt="GIF"></a></div>`).join('');
       } else {
           gifContainer.innerHTML = `<p>Erro ao obter GIFs.</p>`;
       }
