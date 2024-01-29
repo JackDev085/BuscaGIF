@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="/_vercel/insights/script.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="assets/imgs/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/imgs/favicon-16x16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="assets/css/style.css"
@@ -19,13 +22,14 @@
   </head>
   <body>
     <div class="container">
-      <h1>GIFs com Giphy</h1>
-      <label for="searchTerm">Digite uma palavra-chave: </label>
-      <input type="text" id="searchTerm" placeholder="Ex: cats" />
-      <button id="getGifs" onclick="getGifs()">Obter GIFs</button>
-      <div id="gifContainer"></div>
+      <h1>Geragif</h1>
+      <div class="search">
+      <input type="text" id="searchTerm" placeholder="Ex: 'cats'" />
+      <button id="getGifs" onclick="getGifs()"><img src="assets/imgs/lupas.png" alt="lupa"></button>
     </div>
-
+      <div id="gifContainer">
+      </div>
+    </div>
     <script src="assets/js/main.js"></script>
   </body>
 </html>

@@ -1,57 +1,113 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #141301;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+:root{
+  --bg: #000000;
+  --font2: #FF46AF;
+  --font3:#FFFF86;
+  --font: rgb(#FFFFB2);
+}
+*{
   margin: 0;
+  pad: 0;
+  box-sizing: border-box;
+}
+/* Para o Webkit (Safari e Chrome) */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Para o IE e Edge */
+body {
+  -ms-overflow-style: none;
+  background-color: var(--bg);
+}
+
+/* Para o Firefox */
+body {
+  scrollbar-width: none;
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  max-width: 100vw;
+  max-height: auto;
 }
 
 h1 {
-  color: #E5E7E6;
+  color: var(--font);
+  font-size: 100px;
+  font-family: 'Honk', system-ui;
 }
 
-label {
-  font-size: 1.2em;
-  margin-right: 5px;
-  color: #E5E7E6;
-}
-
-input {
-  font-size: 1em;
-  padding: 5px;
-  background-color: #B7B5B3;
-  color: #141301;
-}
 input::placeholder{
-  color: #141301;
-}
-input:focus {
- border: 2px solid #141301;
- box-shadow: 0 0 5px #141301;
+  color: var(--font2);
 }
 
 
-button {
-  font-size: 1em;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
-  background-color: #B7B5B3;
-  color:#141301 ;
-}
 
 #gifContainer {
   margin-top: 20px;
+  width: 80vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 30px;
 }
 
 #gifContainer img {
   margin: 5px;
   max-width: 100%;
   border-radius: 8px;
+}
+.card{
+  max-width:20vw;
+  height: auto;
+}
+.search{
+  display: flex;
+  width: 80vw;
+  align-items: center;
+  justify-content: center;
+}
+.search button{
+  background-color: var(--bg);
+  box-shadow: none;
+  border: none;
+
+  cursor: pointer;
+}
+.search button img {
+  width: 40px;
+}
+
+.search input {
+  width: 46vw;
+  height: 6vh;
+  text-align: center;
+  font-size:22px;
+  margin-bottom: 6px;
+  border-radius: 20px;
+  background-color: var(--bg);
+  color: var(--font2);
+  font-weight:700;
+  font-family: system-ui;;
+}
+
+@media (max-width:600px){
+  h1{
+    font-size:80px
+  }
+  .search input {
+    width: 70vw;
+    height: 5vh;
+  }
+  .search button img {
+    width: 30px;
+  }
+  
 }
